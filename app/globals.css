@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* -----------------------------Landing Nav */
+
+.landing-nav {
+  @apply border-b-2
+  bg-dark;
+}
+
+.landing-nav-list {
+  @apply flex
+  justify-end
+  px-3
+  sm:px-6
+  py-6
+  md:py-8
+  space-x-3
+  lg:space-x-6;
+}
+
+/* -----------------------------Landing Nav End */
+/* -----------------------------Dashboard Nav */
+
+.dashboard-nav {
+  @apply flex
+  flex-col
+  pt-12
+  border-r-2
+  text-center
+  bg-dark
+  text-main
+  h-screen
+  w-[75%]
+  xl:w-[20%];
+}
+
+.nav-item {
+  @apply hover:text-white transition duration-200;
+}
+
+/* -----------------------------Dashboard Nav */
+
+/* -----------------------------Buttons */
+.cta-button {
+  @apply bg-secondary
+  hover:bg-secondaryDark
+  active:bg-secondaryDarker
+  transition-all
+  duration-200
+  px-6
+  py-2
+  rounded-full
+  text-white
+  text-sm
+  lg:text-lg;
+}
+
+.secondary-button {
+  @apply border
+  border-secondaryDark
+  hover:bg-secondaryDark
+  active:bg-secondaryDarker
+  active:border-secondaryDarker
+  text-white
+  transition-all
+  duration-200
+  px-6
+  py-2
+  rounded-full
+  text-sm
+  lg:text-lg;
+}
+/* -----------------------------Buttons End */
