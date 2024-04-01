@@ -2,15 +2,10 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 import { FaGoogle, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import Button from '@/Button';
+import { AuthFormItemsT } from '@/types/AuthForm.type';
 
-import { AuthFormItems } from '@/types/AuthForm';
-
-const AuthForm: FC<AuthFormItems> = ({
-  title,
-  buttonText,
-  inputs,
-  message,
-}) => {
+const AuthForm: FC<AuthFormItemsT> = ({ title, button, inputs, message }) => {
   return (
     <div className="bg-dark text-white rounded-lg w-[80%] md:w-[50%] xl:w-[40%] py-12 flex flex-col">
       <h1 className="text-4xl mb-6 font-semibold">{title}</h1>
@@ -30,9 +25,11 @@ const AuthForm: FC<AuthFormItems> = ({
             />
           </div>
         ))}
-        <button type="submit" className="cta-button ">
-          {buttonText}
-        </button>
+        <Button
+          type={button.type}
+          text={button.text}
+          className={button.className}
+        />
         <p className="text-sm text-white">
           {message.text}{' '}
           <Link
