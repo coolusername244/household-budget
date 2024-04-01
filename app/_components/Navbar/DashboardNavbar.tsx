@@ -19,12 +19,6 @@ const Navbar = () => {
             <Button {...link} />
           </li>
         ))}
-        {/* <li>
-          <Link href={'/'}>Sign Out</Link>
-        </li>
-        <li>
-          <Link href={'/settings'}>Settings</Link>
-        </li> */}
       </ul>
     </nav>
   );
