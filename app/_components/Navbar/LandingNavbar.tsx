@@ -1,6 +1,6 @@
 import React from 'react';
 import { landingLinks } from './constants';
-import Button from '@/Button';
+import Navlink from '@/app/_components/Navbar/Navlink';
 
 const LandingNavbar = () => {
   return (
@@ -8,7 +8,7 @@ const LandingNavbar = () => {
       <ul className="landing-nav-list">
         {landingLinks.map((link, i) => (
           <li key={i}>
-            <Button {...link} />
+            <Navlink {...link} />
           </li>
         ))}
       </ul>

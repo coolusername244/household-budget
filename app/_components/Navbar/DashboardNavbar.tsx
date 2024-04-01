@@ -1,6 +1,6 @@
 import React from 'react';
 import { dashboardLinks, bottomLinks } from './constants';
-import Button from '@/Button';
+import Navlink from '@/app/_components/Navbar/Navlink';
 
 const Navbar = () => {
   return (
@@ -9,14 +9,14 @@ const Navbar = () => {
       <ul className="flex-1 pt-6">
         {dashboardLinks.map((link, i) => (
           <li key={i} className="pt-6">
-            <Button {...link} />
+            <Navlink {...link} />
           </li>
         ))}
       </ul>
       <ul className="flex justify-between p-6">
         {bottomLinks.map((link, i) => (
           <li key={i}>
-            <Button {...link} />
+            <Navlink {...link} />
           </li>
         ))}
       </ul>
