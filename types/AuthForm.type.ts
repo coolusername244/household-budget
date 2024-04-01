@@ -1,6 +1,8 @@
-export type AuthFormItems = {
+import { ButtonT } from './Button.type';
+
+export type AuthFormItemsT = {
   title: string;
-  buttonText: string;
+  button: ButtonT;
   message: {
     text: string;
     link: {
