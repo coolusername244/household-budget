@@ -72,4 +72,15 @@
   text-sm
   lg:text-lg;
 }
+
+.social-button {
+  @apply text-white
+  bg-secondary
+  hover:bg-secondaryDark
+  active:bg-secondaryDarker
+  transition-all
+  duration-200
+  rounded-full
+  p-4;
+}
 /* -----------------------------Buttons End */
