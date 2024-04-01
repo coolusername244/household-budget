@@ -1,6 +1,6 @@
-import { Button } from '@/types/button';
+import { NavlinkT } from '@/types/Navlink.type';
 
-export const dashboardLinks: Button[] = [
+export const dashboardLinks: NavlinkT[] = [
   {
     text: 'Dashboard',
     href: '/dashboard',
@@ -23,7 +23,7 @@ export const dashboardLinks: Button[] = [
   },
 ];
 
-export const landingLinks: Button[] = [
+export const landingLinks: NavlinkT[] = [
   {
     text: 'Register',
     href: '/register',
@@ -36,7 +36,7 @@ export const landingLinks: Button[] = [
   },
 ];
 
-export const bottomLinks: Button[] = [
+export const bottomLinks: NavlinkT[] = [
   {
     text: 'Sign Out',
     href: '/',
