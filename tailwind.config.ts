@@ -15,6 +15,7 @@ const config: Config = {
         secondaryDark: '#3F6BD3',
         secondaryDarker: '#2F509E',
         tertiary: '#49AB98',
+        error: '#ff545f',
         accent: '#515D86',
         dark: '#212735',
       },
