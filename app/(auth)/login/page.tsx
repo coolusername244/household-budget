@@ -1,11 +1,15 @@
 import React from 'react';
 import AuthForm from '@/app/_components/forms/AuthForm';
-import { AuthFormItems } from '@/types/AuthForm';
+import { AuthFormItemsT } from '@/types/AuthForm.type';
 
 const Login = () => {
-  const formItems: AuthFormItems = {
+  const formItems: AuthFormItemsT = {
     title: 'Login',
-    buttonText: 'Sign In',
+    button: {
+      text: 'Sign In',
+      className: 'cta-button',
+      type: 'submit',
+    },
     message: {
       text: "Don't have an account yet?",
       link: {
