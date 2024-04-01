@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import Link from 'next/link';
-import { Button } from '@/types/button';
+import { ButtonT } from '@/types/Button.type';
 
-const Button: FC<Button> = ({ className, href, text }) => {
+const Button: FC<ButtonT> = ({ className, text, type }) => {
   return (
-    <Link className={className} href={href}>
+    <button type={type} className={className}>
       {text}
-    </Link>
+    </button>
   );
 };
 
