@@ -1,9 +1,9 @@
 import React from 'react';
 import AuthForm from '@/app/_components/forms/AuthForm';
-import { AuthFormItems } from '@/types/AuthForm.type';
+import { AuthFormItemsT } from '@/types/AuthForm.type';
 
 const Register = () => {
-  const formItems: AuthFormItems = {
+  const formItems: AuthFormItemsT = {
     title: 'Register',
     button: {
       text: 'Sign Up',
