@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthForm from '@/app/_components/forms/AuthForm';
+import AuthForm from '@/app/_components/AuthForm/AuthForm';
 import { AuthFormItemsT } from '@/types/AuthForm.type';
 
 const Register = () => {
@@ -52,9 +52,9 @@ const Register = () => {
       },
       {
         label: 'Confirm Password*',
-        type: 'password',
-        name: 'password',
-        id: 'password',
+        type: 'confirmPassword',
+        name: 'confirmPassword',
+        id: 'confirmPassword',
         required: true,
         placeholder: '••••••••',
       },
