@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../globals.css';
+import Provider from '@/app/_components/Provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,9 +18,11 @@ export default function AuthLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <main className="h-svh bg-main flex justify-center items-center text-center">
-          {children}
-        </main>
+        <Provider>
+          <main className="h-svh bg-main flex justify-center items-center text-center">
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );
