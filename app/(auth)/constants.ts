@@ -41,36 +41,21 @@ export const registerInputs = [
   },
 ];
 
-export const formItems = {
-  title: 'Login',
-  button: {
-    text: 'Sign In',
-    className: 'cta-button',
-    type: 'submit',
+export const loginInputs = [
+  {
+    label: 'Email',
+    type: 'email',
+    name: 'email',
+    id: 'email',
+    required: true,
+    placeholder: 'johndoe@example.com',
   },
-  message: {
-    text: "Don't have an account yet?",
-    link: {
-      text: 'Sign up',
-      href: '/register',
-    },
+  {
+    label: 'Password',
+    type: 'password',
+    name: 'password',
+    id: 'password',
+    required: true,
+    placeholder: '••••••••',
   },
-  inputs: [
-    {
-      label: 'Email',
-      type: 'email',
-      name: 'email',
-      id: 'email',
-      required: true,
-      placeholder: 'johndoe@example.com',
-    },
-    {
-      label: 'Password',
-      type: 'password',
-      name: 'password',
-      id: 'password',
-      required: true,
-      placeholder: '••••••••',
-    },
-  ],
-};
+];
