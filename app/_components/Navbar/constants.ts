@@ -35,14 +35,3 @@ export const landingLinks: NavlinkT[] = [
     className: 'secondary-button',
   },
 ];
-
-export const bottomLinks: NavlinkT[] = [
-  {
-    text: 'Sign Out',
-    href: '/',
-  },
-  {
-    text: 'Settings',
-    href: '/settings',
-  },
-];
