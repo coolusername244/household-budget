@@ -1,14 +1,14 @@
 'use client';
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import axios from 'axios';
 import Link from 'next/link';
+import { signIn } from 'next-auth/react';
+import axios from 'axios';
 import { z } from 'zod';
 import { FaGoogle, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
-import Button from '@/Button';
-import { registerInputs } from '../constants';
+import CallToAction from '@/app/_components/Buttons/CallToAction';
+import { registerInputs } from '@/app/(auth)/constants';
 import { RegistrationFormErrorT } from '@/types/RegistrationFormError.type';
 import { RegistrationFormDataT } from '@/types/RegistrationFormData';
 
@@ -26,8 +26,6 @@ const registerSchema = z
   });
 
 const Register = () => {
-  const router = useRouter();
-
   const [loading, setLoading] = useState(false);
   const [submissionError, setSubmissionError] = useState(null);
   const [formError, setFormError] = useState<RegistrationFormErrorT>({
@@ -70,7 +68,12 @@ const Register = () => {
       setFormError({ email: null, password: null, confirmPassword: null });
       const response = await axios.post('/api/user', formData);
       if (response.status === 201) {
-        router.push('/dashboard');
+        await signIn('credentials', {
+          email: formData.email,
+          password: formData.password,
+          redirect: true,
+          callbackUrl: '/dashboard',
+        });
       }
     } catch (error: any) {
       setSubmissionError(error.response.data.error);
@@ -107,11 +110,7 @@ const Register = () => {
         {submissionError && (
           <p className="text-red-500 text-sm pt-3">{submissionError}</p>
         )}
-        <Button
-          type="submit"
-          text={loading ? 'Loading...' : 'Sign Up'}
-          className="cta-button"
-        />
+        <CallToAction type="submit" text={loading ? 'Loading...' : 'Sign Up'} />
         <p className="text-sm text-white">
           Already have an account?{' '}
           <Link href={'/login'} className="text-tertiary hover:underline">
