@@ -1,8 +1,10 @@
 import React from 'react';
-import { dashboardLinks, bottomLinks } from './constants';
+import { dashboardLinks } from './constants';
 import Navlink from '@/app/_components/Navbar/Navlink';
+import Link from 'next/link';
+import SignOutButton from '@/Buttons/SignOutButton';
 
-const Navbar = () => {
+const Navbar = async () => {
   return (
     <nav className="dashboard-nav">
       <h1 className="">Welcome, Username!</h1>
@@ -14,11 +16,12 @@ const Navbar = () => {
         ))}
       </ul>
       <ul className="flex justify-between p-6">
-        {bottomLinks.map((link, i) => (
-          <li key={i}>
-            <Navlink {...link} />
-          </li>
-        ))}
+        <li>
+          <SignOutButton />
+        </li>
+        <li>
+          <Link href={'/settings'}>Settings</Link>
+        </li>
       </ul>
     </nav>
   );
