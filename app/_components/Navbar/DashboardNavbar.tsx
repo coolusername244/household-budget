@@ -8,8 +8,8 @@ import { authOptions } from '@/lib/auth';
 
 const Navbar = async () => {
   const session = await getServerSession(authOptions);
-  const { firstName, email } = session!.user;
-  const username = firstName || email!.split('@')[0];
+  const { name, firstName, email } = session!.user;
+  const username = firstName || name?.split(' ')[0] || email!.split('@')[0];
 
   return (
     <nav className="dashboard-nav">
