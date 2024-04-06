@@ -65,24 +65,18 @@ const Login = () => {
         <CallToAction type="submit" text={loading ? 'Loading...' : 'Sign In'} />
         <p className="text-sm text-white">
           Don&apos;t have an account?{' '}
-          <Link href={'/login'} className="text-tertiary hover:underline">
+          <Link href={'/register'} className="text-tertiary hover:underline">
             Sign up
           </Link>
         </p>
       </form>
       <hr className="w-[80%] h-px self-center bg-main border-none mb-6" />
       <div className="flex justify-evenly w-[80%] mx-auto">
-        <button className="social-button">
+        <button
+          className="social-button"
+          onClick={() => signIn('google', { callbackUrl: '/dashboard' })}
+        >
           <FaGoogle />
-        </button>
-        <button className="social-button">
-          <FaFacebookF />
-        </button>
-        <button className="social-button">
-          <FaXTwitter />
-        </button>
-        <button className="social-button">
-          <FaLinkedinIn />
         </button>
       </div>
     </div>
