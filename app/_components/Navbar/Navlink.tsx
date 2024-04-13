@@ -5,7 +5,7 @@ import { NavlinkT } from '@/types/Navlink.type';
 const Navlink: FC<NavlinkT> = ({ className, href, text }) => {
   return (
     <Link className={className} href={href}>
-      {text}
+      <span className="flex-1">{text}</span>
     </Link>
   );
 };

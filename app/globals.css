@@ -23,21 +23,14 @@
 /* -----------------------------Landing Nav End */
 /* -----------------------------Dashboard Nav */
 
-.dashboard-nav {
-  @apply flex
-  flex-col
-  pt-12
-  border-r-2
-  text-center
-  bg-dark
-  text-main
-  h-screen
-  w-[75%]
-  xl:w-[20%];
-}
-
 .nav-item {
-  @apply hover:text-white transition duration-200;
+  @apply flex
+  items-center
+  p-2
+  mx-2
+  rounded-lg
+  hover:text-white
+  hover:bg-gray-700;
 }
 
 /* -----------------------------Dashboard Nav */
