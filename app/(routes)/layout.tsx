@@ -30,7 +30,7 @@ export default async function RoutesLayout({
     <html lang="en">
       <body className={poppins.className}>
         <DashboardNavbar />
-        {children}
+        <main className="pl-72 pt-12 bg-primary min-h-screen">{children}</main>
       </body>
     </html>
   );
