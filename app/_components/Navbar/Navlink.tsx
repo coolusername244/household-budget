@@ -10,7 +10,7 @@ const Navlink: FC<NavlinkT> = ({ className, href, text }) => {
   return (
     <Link
       className={`${className} ${
-        pathname === `/${text.toLowerCase()}` ? 'text-white' : ''
+        pathname === `/${text.toLowerCase()}` ? 'text-tertiary' : ''
       }`}
       href={href}
     >
