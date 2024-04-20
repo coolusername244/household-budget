@@ -1,7 +1,72 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import BarChart from '@/app/_components/BarChart';
+import { FaAngleLeft, FaAngleRight, FaAngleDoubleRight } from 'react-icons/fa';
 
 const Income = () => {
-  return <div>Income</div>;
+  const [year, setYear] = useState(new Date().getFullYear());
+
+  const handleYearBack = () => {
+    setYear(prev => prev - 1);
+  };
+
+  const handleYearForward = () => {
+    setYear(prev => prev + 1);
+  };
+
+  return (
+    <>
+      <section className="mx-auto w-[80%]">
+        <div className="flex justify-center">
+          <button onClick={handleYearBack}>
+            <FaAngleLeft />
+          </button>
+          <h2 className="text-black text-center px-2">{year}</h2>
+          <button
+            onClick={handleYearForward}
+            disabled={year === new Date().getFullYear()}
+          >
+            <FaAngleRight />
+          </button>
+        </div>
+        <BarChart />
+      </section>
+      <section className="mx-auto w-[60%] mt-12">
+        <div className="">
+          <form className="bg-dark text-white font-medium">
+            <h2>Record Your Income</h2>
+            <div className="flex">
+              <label htmlFor="income">Salary</label>
+              <input
+                type="number"
+                name="income"
+                id="income"
+                placeholder="Enter your income"
+              />
+            </div>
+            <div className="flex">
+              <label htmlFor="overtime">Overtime</label>
+              <input
+                type="number"
+                name="overtime"
+                id="overtime"
+                placeholder="Enter your overtime"
+              />
+            </div>
+            <div className="flex">
+              <label htmlFor="rental">Rental Income</label>
+              <input
+                type="number"
+                name="rental"
+                id="rental"
+                placeholder="Enter your rental income"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Income;
