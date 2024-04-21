@@ -33,8 +33,8 @@ const Income = () => {
       </section>
       <section className="mx-auto w-[60%] mt-12">
         <div className="">
-          <form className="bg-dark text-white font-medium">
-            <h2>Record Your Income</h2>
+          <form className="bg-dark text-white font-medium p-6">
+            <h2 className="text-center pb-6 text-2xl">Record Your Income</h2>
             <div className="flex">
               <label htmlFor="income">Salary</label>
               <input
