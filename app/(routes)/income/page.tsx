@@ -37,30 +37,24 @@ const Income = () => {
             <h2 className="text-center pb-6 text-2xl">Record Your Income</h2>
             <div className="flex">
               <label htmlFor="income">Salary</label>
-              <input
-                type="number"
-                name="income"
-                id="income"
-                placeholder="Enter your income"
-              />
+              <input type="number" name="income" id="income" />
             </div>
             <div className="flex">
               <label htmlFor="overtime">Overtime</label>
-              <input
-                type="number"
-                name="overtime"
-                id="overtime"
-                placeholder="Enter your overtime"
-              />
+              <input type="number" name="overtime" id="overtime" />
             </div>
             <div className="flex">
               <label htmlFor="rental">Rental Income</label>
-              <input
-                type="number"
-                name="rental"
-                id="rental"
-                placeholder="Enter your rental income"
-              />
+              <input type="number" name="rental" id="rental" />
+            </div>
+            <div className="flex">
+              <label htmlFor="other">Other Income</label>
+              <input type="number" name="other" id="other" />
+            </div>
+            <div className="flex justify-center">
+              <button className="bg-tertiary text-white py-2 px-6 rounded-full mt-6">
+                Submit
+              </button>
             </div>
           </form>
         </div>
