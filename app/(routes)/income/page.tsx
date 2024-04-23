@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import BarChart from '@/app/_components/BarChart';
 import { FaAngleLeft, FaAngleRight, FaAngleDoubleRight } from 'react-icons/fa';
+import Button from '@/app/_components/Button';
+import CallToAction from '@/app/_components/Buttons/CallToAction';
 
 const Income = () => {
   const [year, setYear] = useState(new Date().getFullYear());
@@ -51,10 +53,8 @@ const Income = () => {
               <label htmlFor="other">Other Income</label>
               <input type="number" name="other" id="other" />
             </div>
-            <div className="flex justify-center">
-              <button className="bg-tertiary text-white py-2 px-6 rounded-full mt-6">
-                Submit
-              </button>
+            <div className="flex justify-center mt-6">
+              <CallToAction type={'submit'} text={'Submit'} className={'cta'} />
             </div>
           </form>
         </div>
