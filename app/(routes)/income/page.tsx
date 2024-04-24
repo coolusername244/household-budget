@@ -39,19 +39,39 @@ const Income = () => {
             <h2 className="text-center pb-6 text-2xl">Record Your Income</h2>
             <div className="flex">
               <label htmlFor="income">Salary</label>
-              <input type="number" name="income" id="income" />
+              <input
+                type="number"
+                name="income"
+                id="income"
+                className="focus-visible:outline-tertiary"
+              />
             </div>
             <div className="flex">
               <label htmlFor="overtime">Overtime</label>
-              <input type="number" name="overtime" id="overtime" />
+              <input
+                type="number"
+                name="overtime"
+                id="overtime"
+                className="focus-visible:outline-tertiary"
+              />
             </div>
             <div className="flex">
               <label htmlFor="rental">Rental Income</label>
-              <input type="number" name="rental" id="rental" />
+              <input
+                type="number"
+                name="rental"
+                id="rental"
+                className="focus-visible:outline-tertiary"
+              />
             </div>
             <div className="flex">
               <label htmlFor="other">Other Income</label>
-              <input type="number" name="other" id="other" />
+              <input
+                type="number"
+                name="other"
+                id="other"
+                className="focus-visible:outline-tertiary"
+              />
             </div>
             <div className="flex justify-center mt-6">
               <CallToAction type={'submit'} text={'Submit'} className={'cta'} />
