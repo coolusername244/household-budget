@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import BarChart from '@/app/_components/BarChart';
-import { FaAngleLeft, FaAngleRight, FaAngleDoubleRight } from 'react-icons/fa';
-import Button from '@/app/_components/Button';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import CallToAction from '@/app/_components/Buttons/CallToAction';
 
 const Income = () => {
@@ -33,7 +32,7 @@ const Income = () => {
         </div>
         <BarChart />
       </section>
-      <section className="mx-auto w-[60%] mt-12">
+      <section className="mx-auto w-[60%] mt-12 pb-12">
         <div className="">
           <form className="bg-dark text-white font-medium p-6">
             <h2 className="text-center pb-6 text-2xl">Record Your Income</h2>
