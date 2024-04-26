@@ -15,6 +15,25 @@ const Income = () => {
     setYear(prev => prev + 1);
   };
 
+  const sources = [
+    {
+      title: 'Salary',
+      name: 'salary',
+    },
+    {
+      title: 'Overtime',
+      name: 'overtime',
+    },
+    {
+      title: 'Rental Income',
+      name: 'rental',
+    },
+    {
+      title: 'Other Income',
+      name: 'other',
+    },
+  ];
+
   return (
     <>
       <section className="mx-auto w-[80%]">
@@ -34,45 +53,22 @@ const Income = () => {
       </section>
       <section className="mx-auto w-[60%] mt-12 pb-12">
         <div className="">
-          <form className="bg-dark text-white font-medium p-6">
-            <h2 className="text-center pb-6 text-2xl">Record Your Income</h2>
-            <div className="flex">
-              <label htmlFor="income">Salary</label>
-              <input
-                type="number"
-                name="income"
-                id="income"
-                className="focus-visible:outline-tertiary"
-              />
+          <form className="bg-dark text-white font-medium p-12">
+            <h2 className="text-center pb-12 text-2xl">Record Your Income</h2>
+            <div className="grid grid-cols-2 gap-6">
+              {sources.map((source, index) => (
+                <div className="flex justify-between" key={index}>
+                  <label htmlFor={source.name}>{source.title}</label>
+                  <input
+                    type="number"
+                    name={source.name}
+                    id={source.name}
+                    className="rounded-md focus-visible:outline-tertiary"
+                  />
+                </div>
+              ))}
             </div>
-            <div className="flex">
-              <label htmlFor="overtime">Overtime</label>
-              <input
-                type="number"
-                name="overtime"
-                id="overtime"
-                className="focus-visible:outline-tertiary"
-              />
-            </div>
-            <div className="flex">
-              <label htmlFor="rental">Rental Income</label>
-              <input
-                type="number"
-                name="rental"
-                id="rental"
-                className="focus-visible:outline-tertiary"
-              />
-            </div>
-            <div className="flex">
-              <label htmlFor="other">Other Income</label>
-              <input
-                type="number"
-                name="other"
-                id="other"
-                className="focus-visible:outline-tertiary"
-              />
-            </div>
-            <div className="flex justify-center mt-6">
+            <div className="flex justify-center mt-12">
               <CallToAction type={'submit'} text={'Submit'} className={'cta'} />
             </div>
           </form>
