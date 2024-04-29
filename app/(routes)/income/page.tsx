@@ -63,7 +63,7 @@ const Income = () => {
                     type="number"
                     name={source.name}
                     id={source.name}
-                    className="rounded-md focus-visible:outline-tertiary"
+                    className="rounded-md indent-2 text-black focus-visible:outline-tertiary"
                   />
                 </div>
               ))}
