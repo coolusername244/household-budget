@@ -52,7 +52,7 @@ const Income = () => {
         <BarChart />
       </section>
       <section className="mx-auto w-[60%] mt-12 pb-12">
-        <div className="">
+        <div>
           <form className="bg-dark text-white font-medium p-12">
             <h2 className="text-center pb-12 text-2xl">Record Your Income</h2>
             <div className="grid grid-cols-2 gap-6">
